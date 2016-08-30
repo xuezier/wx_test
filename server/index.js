@@ -3,6 +3,11 @@ const app = require('express')();
 const bodyParser = require('body-parser');
 app.use(bodyParser());
 
+app.use(function(req, next) {
+  console.log(req.headers);
+  next();
+});
+
 const notify_url = 'http://wxtest.tlifang.com/wxqrcodepay';
 const redirect_uri = 'http://wxtest.tlifang.com/redirect';
 
