@@ -9,7 +9,7 @@ app.use(function(req, res, next) {
 });
 
 const notify_url = 'http://wxtest.tlifang.com/wxqrcodepay';
-const redirect_uri = 'http://wxtest.tlifang.com/redirect';
+const redirect_uri = 'http://tlifang.com/redirect';
 
 const WX = require('ym-modules').wx;
 const wx = new WX(require('./WXCONFIG.json'));
