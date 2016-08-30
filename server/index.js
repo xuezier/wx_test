@@ -3,7 +3,7 @@ const app = require('express')();
 const bodyParser = require('body-parser');
 app.use(bodyParser());
 
-app.use(function(req, next) {
+app.use(function(req, res, next) {
   console.log(req.headers);
   next();
 });
