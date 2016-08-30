@@ -14,7 +14,7 @@ const redirect_uri = 'http://wxtest.tlifang.com/redirect';
 const WX = require('ym-modules').wx;
 const wx = new WX(require('./WXCONFIG.json'));
 
-app.get('openid_url', function(req, res) {
+app.get('/openid_url', function(req, res) {
   let uri = wx.getOpenId(redirect_uri);
   res.send(uri);
 });
